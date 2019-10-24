@@ -837,10 +837,18 @@ print('Numero de dias abaixo da média: ' + str(cont))
 
 #86
 vetor = []
+
 n = int(input('Insira a quantidade de numeros desejada: '))
 for _ in range(n):
-    vetorvalue = float(input('Digite as temperaturas: '))
+    vetorvalue = float(input('Digite os numeros: '))
     vetor.append(vetorvalue)
+new = 's'
+while new.lower() == 's':
+    new = str(input('Deseja inserir um novo valor? (s/n)'))
+    vetor.append(vetorvalue)
+
+
 vetor.sort()
+print(vetor)
 
 
