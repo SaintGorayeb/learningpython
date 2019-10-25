@@ -840,15 +840,109 @@ vetor = []
 
 n = int(input('Insira a quantidade de numeros desejada: '))
 for _ in range(n):
-    vetorvalue = float(input('Digite os numeros: '))
+    vetorvalue = int(input('Digite os numeros: '))
     vetor.append(vetorvalue)
-new = 's'
-while new.lower() == 's':
-    new = str(input('Deseja inserir um novo valor? (s/n)'))
-    vetor.append(vetorvalue)
-
 
 vetor.sort()
 print(vetor)
 
+#87
+vetor = []
+
+n = int(input('Insira a quantidade de numeros desejada: '))
+for _ in range(n):
+    vetorvalue = int(input('Digite os numeros: '))
+    vetor.append(vetorvalue)
+
+vetor.sort()
+print(vetor)
+
+new = int(input('Inserir novo valor no vetor: '))
+vetor.append(new)
+vetor.sort()
+print(vetor)
+
+#88
+listnum = []
+n = int(input('Informe o tamanho do vetor desejado: '))
+for _ in range(n):
+    num = int(input('Digite os numeros: '))
+    listnum.append(num)
+    
+num2 = int(input('Digite um número: '))
+flag = False
+novo = []
+for j in listnum:
+    if num2 == j:
+        flag = True
+        listnum.remove(j)
+        novo = listnum
+        print(novo)
+
+if flag == False:
+    print(listnum)
+
+#89
+V1 = []
+V2 = []
+
+n1 = int(input('Informe o tamanho dos vetores 1 e 2: '))
+
+for _ in range(n1):
+    num1 = int(input('Digite os numeros do vetor1: '))
+    V1.append(num1)
+for _ in range(n1):
+    num2 = int(input('Digite os numeros do vetor2: '))
+    V2.append(num2)
+    
+cont = 0
+for j in range(n1):
+    if V1[j] == V2[j]:
+        cont += 1
+
+print('Se repetem ' + str(cont) + ' vezes')
+
+#90
+N = []
+n1 = int(input('Informe o tamanho do vetor desejado: '))
+
+for _ in range(n1):
+    num1 = int(input('Digite os numeros do vetor: '))
+    N.append(num1)
+
+new = int(input('Informe um novo numero: '))
+cont = 0
+
+for j in range(n1):
+    if new == N[j]:
+        cont += 1
+
+print('Se repetem', cont, 'vezes')
+
+#91
+VET = []
+
+n1 = int(input('Informe o tamanho do vetor desejado: '))
+
+for _ in range(n1):
+    num1 = int(input('Digite os numeros do vetor: '))
+    VET.append(num1)
+
+i = 0
+j = 0
+aux1 = []
+cont = 0
+for i in range(n1):
+    for j in range(n1): 
+        if VET[i] == VET[j]:
+            if i == j:
+                cont += 0
+            else:
+                cont += 1
+                aux10 = i+1
+                aux1.append(aux10)
+                
+print('Há', int(cont/2), 'números repetidos nas posições: ')
+print(aux1)
+      
 
