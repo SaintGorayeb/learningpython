@@ -43,8 +43,8 @@ for root, directory, filename in os.walk('.'):
             count_one_object += 1
             
             # get n object
-            for n in range(len(objects))
-                obj = objects[n]
+            for obj in objects):
+                print(obj['size'])
 
             # IF OBJECT HAS NO MASK ANNOTATION GO TO NEXT FILE
             if 'bitmap' not in obj.keys():
